@@ -1,13 +1,15 @@
+import { ReactNode } from "react";
+
 import Footer from '../Footer/Footer'
 import Header from '../Header/Header'
-import styles from './Layout.module.scss'
-export interface IPrimaryLayout extends React.ComponentPropsWithoutRef<'div'> {
-  justify?: 'items-center' | 'items-start';
+import style from './Layout.module.scss'
+interface Props {
+  children: ReactNode;
 }
 
-const Layout: React.FC<IPrimaryLayout> = ({ children }) => {
+const Layout = ({ children }: Props) => {
   return (
-    <div className={styles.container}>
+    <div className={style.container}>
       <Header/>
       <main>{children}</main>
       <Footer/>
