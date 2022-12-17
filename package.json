@@ -18,7 +18,8 @@
     "react-dom": "18.2.0",
     "reset-css": "^5.0.1",
     "sass": "^1.55.0",
-    "scss": "^0.2.4"
+    "scss": "^0.2.4",
+    "superjson": "^1.12.0"
   },
   "prettier": {
     "trailingComma": "all",
