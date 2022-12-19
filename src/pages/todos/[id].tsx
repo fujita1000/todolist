@@ -1,7 +1,8 @@
 import { useRouter } from 'next/router';
 import { useState, FormEvent, FormEventHandler, useRef } from 'react';
+import style from '../../styles/item.module.scss';
 import { Todo } from '../../utils/types';
-import style from '@/styles/item.module.scss';
+
 
 // Define Prop Interface
 interface ShowProps {

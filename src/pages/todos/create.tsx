@@ -1,7 +1,8 @@
 import { useRouter } from 'next/router';
 import { FormEvent, FormEventHandler, useRef } from 'react';
+import style from '../../styles/create.module.scss';
 import { Todo } from '../../utils/types';
-import style from '@/styles/create.module.scss';
+
 
 // Define props
 interface CreateProps {

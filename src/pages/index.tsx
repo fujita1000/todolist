@@ -1,6 +1,7 @@
 import Link from 'next/link';
+import style from "../styles/Home.module.scss"
 import { Todo } from '../utils/types';
-import style from "@/styles/Home.module.scss"
+
 
 // コンポーネントプロップスの定義
 interface IndexProps {
