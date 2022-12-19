@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
-import { useState } from 'react';
+import { useState, FormEvent, FormEventHandler, useRef } from 'react';
 import { Todo } from '../../utils/types';
+import style from '@/styles/item.module.scss';
 
 // Define Prop Interface
 interface ShowProps {
@@ -13,9 +14,18 @@ function Show(props: ShowProps) {
   // get the next router, so we can use router.push later
   const router = useRouter();
 
+  const item = useRef<HTMLInputElement>(null);
+
   // set the todo as state for modification
   const [todo, setTodo] = useState<Todo>(props.todo);
 
+  // メモの内容を編集する
+  const handleUpdate: FormEventHandler<HTMLFormElement> = async (event) => {
+    event.preventDefault();
+
+  };
+
+  
   // function to complete a todo
   const handleComplete = async () => {
     if (!todo.completed) {
@@ -47,18 +57,25 @@ function Show(props: ShowProps) {
 
   //return JSX
   return (
-    <div>
-      <h1>{todo.item}</h1>
-      <h2>{todo.completed ? 'completed' : 'incomplete'}</h2>
-      <button onClick={handleComplete}>Complete</button>
-      <button onClick={handleDelete}>Delete</button>
+    <div className={style.container}>
+      <h1 className={style.h1}>{todo.item}</h1>
+      <h2 className={style.h2}>{todo.completed ? '完了' : '未完了'}</h2>
+      <div className={style.flex}>
+      <button onClick={handleComplete} className={style.button}>
+        完成
+      </button>
+      <button onClick={handleDelete} className={style.button}>
+        削除
+      </button>
       <button
+        className={style.button}
         onClick={() => {
           router.push('/');
         }}
       >
-        Go Back
+        戻る
       </button>
+      </div>
     </div>
   );
 }

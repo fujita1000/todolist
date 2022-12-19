@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import { FormEvent, FormEventHandler, useRef } from 'react';
 import { Todo } from '../../utils/types';
+import style from '@/styles/create.module.scss';
 
 // Define props
 interface CreateProps {
@@ -12,14 +13,15 @@ function Create(props: CreateProps) {
   // get the next route
   const router = useRouter();
 
-  // since there is just one input we will use a uncontrolled form
-  const item = useRef<HTMLInputElement>(null);
+  // 入力は1つだけなので、制御されないフォームを使用します。
+  const item = useRef<HTMLTextAreaElement>(null);
 
-  // Function to create new todo
+
+  // 新規Todo作成機能
   const handleSubmit: FormEventHandler<HTMLFormElement> = async (event) => {
     event.preventDefault();
 
-    // construct new todo, create variable, check it item.current is not null to pass type checks
+    // 新規Todoの作成、変数の作成、item.currentがnullでないことの確認（型チェックのため
     let todo: Todo = { item: '', completed: false };
     if (null !== item.current) {
       todo = { item: item.current.value, completed: false };
@@ -40,10 +42,18 @@ function Create(props: CreateProps) {
 
   return (
     <div>
-      <h1>Create a New Todo</h1>
+      <h1 className={style.h1}>メモ欄</h1>
       <form onSubmit={handleSubmit}>
-        <input type='text' ref={item}></input>
-        <input type='submit' value='create todo'></input>
+        <div className={style.button_con}>
+          <textarea
+            ref={item}
+            name='txtname'
+            className={style.textarea}
+          ></textarea>
+        </div>
+        <div className={style.button_con}>
+          <input type='submit' value='作成' className={style.button}></input>
+        </div>
       </form>
     </div>
   );

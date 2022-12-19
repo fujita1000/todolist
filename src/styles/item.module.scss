@@ -1,0 +1,212 @@
+.container{
+  width: 80vw;
+  margin: 0 auto;
+  line-height:2.2vw;
+}
+.h1{
+  font-size: 2vw;
+}
+.h2{
+  margin-top: 2vw;
+  font-size: 2vw;
+  display: flex;
+}
+.flex{
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  align-items: center;
+}
+.button{
+  font-size: 1.6vw;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 1vw;
+    appearance: none;
+    background-color: rgb(203, 199, 255);
+    width: 25vw;
+    height: 4vw;
+    border: solid 0.3vw #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  margin-top: 2vw;
+}
+
+/*------------------------------------------
+  Responsive Grid Media Queries - 1280, 1024, 768, 480
+   1280-1024   - デスクトップ（デフォルトのグリッド）
+   1024-768    - タブレット横長
+   768-480     - タブレット縦長
+   480-less    - スマホ
+--------------------------------------------*/
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+  .container {
+    width: 1000px;
+    margin: 0 auto;
+    line-height: 30px;
+  }
+
+  .h1 {
+    font-size: 25px;
+  }
+
+  .h2 {
+    margin-top: 20px;
+    font-size: 25px;
+    display: flex;
+  }
+
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    align-items: center;
+  }
+
+  .button {
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 10px;
+    appearance: none;
+    background-color: rgb(203, 199, 255);
+    width: 300px;
+    height: 50px;
+    border: solid 2px #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .container {
+      width: 800px;
+      margin: 0 auto;
+      line-height: 30px;
+    }
+  
+    .h1 {
+      font-size: 25px;
+    }
+  
+    .h2 {
+      margin-top: 20px;
+      font-size: 25px;
+      display: flex;
+    }
+  
+    .flex {
+      display: flex;
+      justify-content: space-between;
+      width: 800px;
+      align-items: center;
+    }
+  
+    .button {
+      font-size: 20px;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      padding: 10px;
+      appearance: none;
+      background-color: rgb(203, 199, 255);
+      width: 240px;
+      height: 50px;
+      border: solid 2px #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+    .container {
+        width: 600px;
+        margin: 0 auto;
+        line-height: 30px;
+      }
+    
+      .h1 {
+        font-size: 20px;
+      }
+    
+      .h2 {
+        margin-top: 15px;
+        font-size: 20px;
+        display: flex;
+      }
+    
+      .flex {
+        display: flex;
+        justify-content: space-between;
+        width: 600px;
+        align-items: center;
+      }
+    
+      .button {
+        font-size: 20px;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        padding: 10px;
+        appearance: none;
+        background-color: rgb(203, 199, 255);
+        width: 175px;
+        height: 45px;
+        border: solid 2px #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+      }
+}
+
+@media all and (max-width: 480px) {
+      .container {
+          width: 350px;
+          margin: 0 auto;
+          line-height: 20px;
+          padding-right: 10px;
+        }
+      
+        .h1 {
+          font-size: 14px;
+        }
+      
+        .h2 {
+          margin-top: 15px;
+      font-size: 14px;
+          display: flex;
+        }
+      
+        .flex {
+          display: flex;
+          justify-content: space-between;
+        width: 350px;
+          align-items: center;
+            padding-right: 10px;
+        }
+      
+        .button {
+          font-size: 14px;
+          border: none;
+          cursor: pointer;
+          outline: none;
+          padding: 10px;
+          appearance: none;
+          background-color: rgb(203, 199, 255);
+          width: 100px;
+          height: 30px;
+          border: solid 1px #000;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 20px;
+        }
+}

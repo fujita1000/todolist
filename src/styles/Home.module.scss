@@ -1,129 +1,346 @@
-.container {
-  padding: 0 2rem;
+.container{
+  font-size: 16px;
+  width: 100vw;
+  margin: 0 auto;
 }
-
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
+.h1{
+  font-size: 3vw;
   text-align: center;
+  font-weight: bold;
 }
-
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
+.h3{
+    display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 10;
+      overflow: hidden;
+      font-size: 1.4vw;
 }
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+.p{
+   font-size: 1.4vw;
 }
-
-.grid {
+.button_con{
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
+  align-items: center;
+  margin-top: 3vw;
+}
+.button {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+  background-color: rgb(203, 199, 255);
+  width: 60vw;
+  height: 5vw;
+  font-size: 2vw;
+  border: solid 0.3vw #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo_con{
+ display: flex;
+ flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+}
+.todo{
+    width: 20vw;
+    margin: 2vw;
+    height: 20vw;
+    background-color: rgb(222, 250, 205);
+    border: solid 0.3vw#000;
+    border-radius: 1.5vw;
+    padding: 1.5vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    overflow-wrap: break-word; 
 }
 
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+/*------------------------------------------
+  Responsive Grid Media Queries - 1280, 1024, 768, 480
+   1280-1024   - デスクトップ（デフォルトのグリッド）
+   1024-768    - タブレット横長
+   768-480     - タブレット縦長
+   480-less    - スマホ
+--------------------------------------------*/
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+  .container {
+      font-size: 16px;
+      width: 1200px;
+      margin: 0 auto;
+    }
+  
+    .h1 {
+      font-size: 40px;
+      text-align: center;
+      font-weight: bold;
+    }
+  
+    .h3 {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 10;
+      overflow: hidden;
+      font-size: 20px;
+    }
+  
+    .p {
+      font-size: 20px;
+    }
+  
+    .button_con {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+    }
+  
+    .button {
+      border: none;
+      cursor: pointer;
+      outline: none;
+      padding: 0;
+      appearance: none;
+      background-color: rgb(203, 199, 255);
+      width: 800px;
+      height: 60px;
+      font-size: 25px;
+      border: solid 2px #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .todo_con {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      margin-top: 30px;
+    }
+  
+    .todo {
+      width: 330px;
+      margin: 20px;
+      height: 300px;
+      background-color: rgb(222, 250, 205);
+      border: solid 2px#000;
+      border-radius: 20px;
+      padding: 20px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      overflow-wrap: break-word;
+    }
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        font-size: 16px;
+        width: 900px;
+        margin: 0 auto;
+      }
+    
+      .h1 {
+        font-size: 35px;
+        text-align: center;
+        font-weight: bold;
+      }
+    
+      .h3 {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 10;
+        overflow: hidden;
+        font-size: 20px;
+      }
+    
+      .p {
+        font-size: 20px;
+      }
+    
+      .button_con {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+      }
+    
+      .button {
+        border: none;
+        cursor: pointer;
+        outline: none;
+        padding: 0;
+        appearance: none;
+        background-color: rgb(203, 199, 255);
+        width: 800px;
+        height: 60px;
+        font-size: 25px;
+        border: solid 2px #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      .todo_con {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+      }
+    
+      .todo {
+        width: 400px;
+        margin: 20px;
+        height: 325px;
+        background-color: rgb(222, 250, 205);
+        border: solid 2px #000;
+        border-radius: 20px;
+        padding: 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        overflow-wrap: break-word;
+      }
 }
 
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .container {
+      font-size: 16px;
+      width: 700px;
+      margin: 0 auto;
+    }
+  
+    .h1 {
+      font-size: 30px;
+      text-align: center;
+      font-weight: bold;
+    }
+  
+    .h3 {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 10;
+      overflow: hidden;
+      font-size: 20px;
+    }
+  
+    .p {
+      font-size: 20px;
+    }
+  
+    .button_con {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 25px;
+    }
+  
+    .button {
+      border: none;
+      cursor: pointer;
+      outline: none;
+      padding: 0;
+      appearance: none;
+      background-color: rgb(203, 199, 255);
+      width: 700px;
+      height: 60px;
+      font-size: 25px;
+      border: solid 2px #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .todo_con {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      margin-top: 25px;
+    }
+  
+    .todo {
+      width: 300px;
+      margin: 20px;
+      height: 275px;
+      background-color: rgb(222, 250, 205);
+      border: solid 2px #000;
+      border-radius: 20px;
+      padding: 15px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      overflow-wrap: break-word;
+    }
 }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .card,
-  .footer {
-    border-color: #222;
-  }
-  .code {
-    background: #111;
-  }
-  .logo img {
-    filter: invert(1);
-  }
+@media all and (max-width: 480px) {
+    .container {
+        font-size: 14px;
+        width: 700px;
+        margin: 0 auto;
+      }
+    
+      .h1 {
+        font-size: 30px;
+        text-align: center;
+        font-weight: bold;
+      }
+    
+      .h3 {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 10;
+        overflow: hidden;
+        font-size: 16px;
+      }
+    
+      .p {
+        font-size: 14px;
+      }
+    
+      .button_con {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+      }
+    
+      .button {
+        border: none;
+        cursor: pointer;
+        outline: none;
+        padding: 0;
+        appearance: none;
+        background-color: rgb(203, 199, 255);
+        width: 500px;
+        height: 60px;
+        font-size: 25px;
+        border: solid 1px #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      .todo_con {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+      margin-top: 20px;
+      }
+    
+      .todo {
+        width: 280px;
+        margin: 20px;
+        height: 250px;
+        background-color: rgb(222, 250, 205);
+        border: solid 1px #000;
+        border-radius: 20px;
+        padding: 15px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        overflow-wrap: break-word;
+      }
 }
